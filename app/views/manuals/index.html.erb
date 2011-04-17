@@ -1,0 +1,25 @@
+<h1>Listing manuals</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Value</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @manuals.each do |manual| %>
+  <tr>
+    <td><%= manual.name %></td>
+    <td><%= manual.value %></td>
+    <td><%= link_to 'Show', manual %></td>
+    <td><%= link_to 'Edit', edit_manual_path(manual) %></td>
+    <td><%= link_to 'Destroy', manual, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Manual', new_manual_path %>

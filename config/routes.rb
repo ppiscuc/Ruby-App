@@ -1,4 +1,6 @@
 Simpleman::Application.routes.draw do
+  resources :manuals
+
   get "home/index"
 root :to => "home#index"
   # The priority is based upon order of creation:

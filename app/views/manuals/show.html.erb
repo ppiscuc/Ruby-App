@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @manual.name %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @manual.value %>
+</p>
+
+
+<%= link_to 'Edit', edit_manual_path(@manual) %> |
+<%= link_to 'Back', manuals_path %>

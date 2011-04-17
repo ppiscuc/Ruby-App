@@ -10,14 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110417200409) do
+ActiveRecord::Schema.define(:version => 20110417203548) do
 
   create_table "manuals", :force => true do |t|
     t.string   "name"
-    t.text     "value"
+    t.text     "value",      :limit => 2147483647
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "brief"
+    t.text     "brief",      :limit => 2147483647
   end
 
 end

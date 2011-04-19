@@ -1,8 +1,12 @@
 <div class="container">
-    <h1>Ask me.</h1>
-    <h2>I know geek stuff.</h2>
-
-    <div id="help">
-
+    <div id="leftside">
+        <h1>Ask me.</h1>
+        <h2>I know geek stuff.</h2>
+    </div>
+    <div id="rightside">
+        <%= form_for(@manual) do |f| %>
+            <%= f.text_field :svalue %>
+            <%= f.submit "Search" %>
+        <% end %>
     </div>
 </div>

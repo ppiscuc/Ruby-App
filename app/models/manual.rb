@@ -4,9 +4,13 @@ class Manual < ActiveRecord::Base
     validates :value, :presence => true
 
     define_index do
-        #fields
-        indexes value, :sortable => true
-        indexes brief, :sortable => true
-        #attributes
+        indexes [ brief, value ], 
+            :as => :bvalue
     end
+#    define_index do
+#        #fields
+#        indexes value, :sortable => true
+#        indexes brief, :sortable => true
+#        #attributes
+#    end
 end
